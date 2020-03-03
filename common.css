@@ -1,0 +1,378 @@
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+.floatLeft{
+  float: left;
+}
+.floatRight{
+  float: right;
+}
+.clear{
+  clear: both
+}
+.show,.dB{
+  display: block
+}
+.hide,.displayNone{
+  display: none
+}
+.color333{
+    color: #333;
+}
+.tC{
+  text-align: center;
+}
+.tR{
+  text-align: right;
+}
+.overflowHidden {
+  overflow:hidden
+}
+.textHide{
+  display: block;
+  text-indent: -99999px
+}
+.boldText{
+  font-weight: bold;
+  font-style:normal;
+}
+.nText{
+  font-weight: normal;
+}
+.vAm{
+  vertical-align: middle;
+}
+.vAt{
+  vertical-align: top;
+}
+.vAb{
+  vertical-align: bottom;
+}
+.poRel{
+  position: relative;
+}
+.poAbs{
+  position: absolute;
+}
+.margin0{
+  margin: 0;
+}
+.padding0{
+  padding:0;
+}
+.font11{
+  font-size: 11px;
+}
+.phantom{
+    height: 50px;
+}
+
+textarea:focus,
+input:focus {
+  outline: 0;
+}
+/* Question */
+
+input.question{
+  font-size: 35px;
+  font-weight: 300;
+  margin: 0;
+  border: none;
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: padding-top 0.2s ease, margin-top 0.2s ease;
+  overflow-x: hidden; 
+}
+
+input.question + label{
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  width: 20%;
+  border-top: 1px solid red;
+  -webkit-transition: width 0.4s ease;
+  transition: width 0.4s ease;
+  height: 0px;
+}
+
+input.question:focus + label{
+  width: 100%;
+}
+
+input.question:focus,
+input.question:valid {
+  padding-top: 35px;
+}
+
+
+input.question:focus + label > span,
+input.question:valid + label > span {
+  top: -100px;
+  font-size: 25px;
+  color: #333;
+}
+
+input.question:valid + label{
+  border-color: green;
+}
+
+input.question:invalid{
+  box-shadow: none;
+}
+
+input.question + label > span{
+  font-weight: 300;
+  margin: 0;
+  position: absolute;
+  color: #8F8F8F;
+  font-size: 35px;
+  top: -55px;
+  left: 0px;
+  z-index: 1;
+  -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 10px 30px;
+    font-size: 16px;
+    line-height: 1.42857143;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #fff;
+    margin: 20px 0;
+}
+
+input[type="submit"]:hover,input[type="submit"]:active {
+  background: transparent;
+  border: 1px solid #333;
+  color: #333;
+  transition: width 0.4s ease;
+}
+
+input.question:valid ~ input[type="submit"]{
+  -webkit-animation: appear 1s forwards;
+  animation: appear 1s forwards;
+}
+input.question:invalid ~ input[type="submit"]{
+  display: none;
+}
+
+@-webkit-keyframes appear {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+  }
+}
+
+.spinner,
+.spinner:after {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  display: block;
+  color: #FFCC33;
+}
+.spinner:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  border: 3px solid currentColor;
+  border-bottom-color: transparent;
+  border-radius: 100%;
+  background: transparent;
+  animation: ball-clip-rotate .75s linear infinite;
+}
+
+@keyframes ball-clip-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#spinner-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 99999999;
+}
+#spinner-mask{
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 9999999;
+    background: rgba(0,0,0,0.1);
+    height: 100vh;
+    width: 100vw;
+}
+.no-user{
+    font-size: 25px;
+    font-weight: 300;
+    color: #dd0017;
+}
+html, body {
+  background-color:#fff;
+  color: #000;
+  width:100%;
+  height:100%;
+  font-family: 'Lato', Calibri, Arial, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+#main-wrap{
+  min-height: 100%;
+  height: auto;
+}
+
+.repolist p, .ghcontent p {
+  font-size: 1.4em;
+  line-height: 1.55em;
+  margin-bottom: 12px;
+}
+
+.page-title {
+  color: #8f8f8f;
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+.container-wrap {
+  display: flex;
+  height: 100vh;
+}
+
+.align-center-wrap {
+  justify-content: center;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.align-center-wrap form {
+  display: block;
+  padding-top: 20px;
+  height: 160px;
+}
+
+.user-info h2 {
+  font-size: 2.8em;
+  line-height: 1.55em;
+  margin-bottom: 4px;
+  color: #333;
+  border-bottom: 1px solid #d6d6d6;
+  margin: 20px 0;
+}
+.user-info .smallname {
+  font-size: 0.75em;
+  color: #a9a9a9;
+  font-style: italic;
+}
+
+.avi {
+  float: left;
+  margin-right: 7px;
+  margin-bottom: 7px;
+}
+.avi img {
+  border: 1px solid #ccc;
+  padding: 3px;
+}
+
+.repolist {
+  display: block;
+  clear: both;
+  width: 100%;
+}
+.repolist .projects-list {
+  padding: 0;
+}
+.repolist ul li {
+  float: left;
+  padding-bottom: 10px;
+  display: block;
+  width: 100%;
+}
+.repolist ul li a {
+  background-color: transparent;
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid #333;
+  white-space: nowrap;
+  padding: 10px 30px;
+  font-size: 16px;
+  line-height: 1.42857143;
+  user-select: none;
+  color: #333;
+  border-radius: 3px;
+  transition: width 0.4s ease;
+  float: left;
+}
+.repolist ul li a:hover {
+  background: #333;
+  border: 1px solid #333;
+  color: #fff;
+}
+.repolist ul li:first-child {
+  margin-left: 0;
+}
+
+.proj-lists .user-info .smallname.color333 {
+  color: #333;
+}
+
+.growl-container > .growl-item {
+  padding: 20px 10px !important;
+}
+
+.alert-dismissable .close {
+  top: -4px !important;
+  right: 0 !important;
+}
+
+.alert-dismissible .close {
+  top: -4px !important;
+  right: 0 !important;
+}
+
+/******************************************************
+  @group the basic Main Content CSS : Start
+******************************************************/
+/******************************************************
+  @group the basic media queries  : Starts
+******************************************************/
+@media (max-width: 760px) {
+  .user-info h2 {
+    font-size: 21px;
+    margin-top: 10px;
+  }
